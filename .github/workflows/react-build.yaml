@@ -2,7 +2,7 @@ name: React deploy via Github Actions
 
 on:
   push:
-    branches: ['main']
+    branches: ['master']
     
   workflow_dispatch:
   
