@@ -7,9 +7,9 @@ permissions:
     contents: read
     pages: write      
     id-token: write
-    
+
 jobs:
-  build-angular:
+  build-react:
     runs-on: ubuntu-latest
     
     steps:
@@ -28,7 +28,7 @@ jobs:
         run : npm run build
 
       - name: Archieve build artifacts
-        uses : actions/upload-artifact@v4
+        uses : actions/upload-pages-artifact@v3
         with : 
           name : 'react-build'
           path : build
