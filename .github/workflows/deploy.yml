@@ -27,13 +27,13 @@ jobs:
       - name: Build React App
         run : npm run build
 
-      - name: Archieve build artifacts
+      - name: Upload build artifacts
         uses : actions/upload-pages-artifact@v3
         with : 
-          name : 'react-build'
+          name : 'github-pages'
           path : build
       - name: Deploy to Github Pages
         uses: actions/deploy-pages@v4
         with:
             token: ${{secrets.GITHUB_TOKEN}}
-            artifact_name: 'react-build'
+            artifact_name: 'github-pages'
